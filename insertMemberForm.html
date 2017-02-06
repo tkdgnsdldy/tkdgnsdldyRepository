@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+		      #insertMemberTable td:nth-child(1){
+        	font-weight: 700; 
+        	padding-right: 20px;  	
+        }
+	</style>
+</head>
+<body>
+	<div id="insertMemberDiv" style="border: 1px solid black; width:460px;margin:0 auto;margin-top:60px">
+			<div style="text-align:center">
+			  <h2> 직원 등록하기 </h2>
+			</div>  
+			<form id="insertMemberForm" action="insertMember.php" method="post">	
+				<table id="insertMemberTable" style="padding:20px">
+				    <tr>
+				        <td>이름</td>
+				        <td><input type="text" name="name" /></td>
+				    </tr>
+				    <tr>
+				        <td>국적</td>
+				        <td><input type="text" name="nationality" /></td>
+				    </tr>
+				    <tr>
+				        <td>입사일</td>
+				        <td><input type="text" name="joindate" /></td>
+				    </tr>
+				    <tr>
+				        <td>소속</td>
+				        <td><input type="text" name="department" /></td>
+				    </tr>				    
+				        <td>업무</td>
+				        <td><input type="text" name="task" /></td>
+				    </tr>
+				    <tr>
+				        <td>상태</td>
+				        <td>
+                          <select name="state" id="memberState">
+                          	<option value="근무중">근무중</option>
+                          	<option value="휴가">휴가</option>
+                          	<option value="출장">출장</option>
+                          </select>
+				        </td>
+				    </tr>
+				    <tr>
+				        <td>Email</td>
+				        <td><input type="text" name="email" /></td>
+				    </tr>
+				    <tr>
+				        <td>Skype</td>
+				        <td><input type="text" name="skypeId" /></td>
+				    </tr>
+				    <tr>
+				        <td>전화번호(내선)</td>
+				        <td><input type="text" name="innerTelNum" /></td>
+				    </tr>
+				    <tr>
+				        <td>휴대폰 번호</td>
+				        <td><input type="text" name="phoneNum" /></td>
+				    </tr>
+				    <tr>
+				        <td>기타1</td>
+				        <td><textarea name="etc1" id="" cols="30" rows="5"></textarea></td>
+				    </tr>
+				    <tr>
+				        <td>기타2</td>
+				        <td><textarea name="etc2" id="" cols="30" rows="5"></textarea></td>
+				    </tr>
+				        <td></td>
+				        <td style="padding-top:20px"><input id="submitMemberBtn" type="submit" name="submit" value="등록" style="width:100px" />
+				    </tr>
+			    </table>
+			</form>
+		</div>
+</body>
+</html>

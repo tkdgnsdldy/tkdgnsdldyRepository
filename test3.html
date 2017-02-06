@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+           $("#btn").click(function(){
+           	 window.open("www.naver.com","window","width=300,height=300");
+           });
+
+            var template = $( "<li>", { id: "1234", html: $( "<div>", { class: "bar", text: "bla" } ) }); $('body').append(template);
+		});
+	</script>
+</head>
+<body>
+	<button id="btn">popup</button>
+
+	<div id="sitdownDiv">
+		<form action="sitdwon.php" method="post">
+			<select name="" id=""></select>
+		</form>
+	</div>
+</body>
+</html>

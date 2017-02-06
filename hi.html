@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	!</title>
+
+ <style>	
+   li {list-style: none; padding-left: }
+   ul li ul li {margin-left: 100px}
+ </style>
+</head>
+
+<body>
+
+
+   <ul>	
+    <li>
+    	<ul>무통장입금 : 하이니하오 사업용계좌로 무통장 입금합니다.
+         <li style="margin-left:0px">* 주의사항 : 수강신청자 이름과 입금자의 이름이 다를 경우 수강신청 확인이 불가하기 때문에 </li>
+         <li>반드시 고객상담센터로 연락주시기 바랍니다.</li>
+         <li>국민은행 : 602401-04-031827 (주)케이이십일 </li>
+    	</ul>
+    </li>
+    <li>
+    	<ul> 신용카드: 신용카드로 30만원 이상 결제 시 은행/신용카드/보험용 등 금융결제원 승인 공인인
+         <li>증서가 필요합니다.</li>
+         <li>* 공인인증서가 없으신 분은 무통장 입금을 선택하시기 바랍니다.</li>
+    	</ul>
+    </li>
+    <li>
+    	<ul>실시간 계좌이체: 신용카드 결제를 원하지 않으시는 분이 결제하는 방식으로 보유하신 은행계
+          <li>좌에서 즉시이체가 가능한 방식입니다.</li>
+    	</ul>
+    </li>
+    <li> <ul>ARS: T. 1661-6239 ARS 안내에 따라 보유하신 신용카드 정보를 입력하여 결제하는 방법입니다. 	
+          <li>니다.</li>
+         </ul>
+    </li>
+   </ul>
+
+
+	<ul id="pay_d_info">
+		
+
+		<li><input name="yp_sett" type="radio" value="3"  onFocus="this.blur()" /><span><b> 무통장입금 : </b></span><span>    하이니하오 사업용계좌로 무통장 입금합니다.<br>
+			<span style="display:inline-block; margin-left:30px"> * 주의사항 : 수강신청자 이름과 입금자의 이름이 다를 경우 수강신청 확인이 불가하기 때문에</span>
+			<span style="display:inline-block; margin-left:111px"> 반드시 고객상담센터로 연락주시기 바랍니다.</span><br>
+			<a style="text-decoration: underline;"><span style="font-size:17px; font-weight:bold; margin-left:111px">
+			국민은행 : 602401-04-031827 (주)케이이십일</span></a></span>
+	   </li>
+		
+
+		<li>
+		 <input name="yp_sett" type="radio" value="1" onFocus="this.blur()"  onclick="Display('card')"  checked="checked" />
+		 <span style="display:inline-block; margin-left:"><b> 신용카드 : </b></span>
+		<span>신용카드로 30만원 이상 결제 시 은행/신용카드/보험용 등 금융결제원 승인 공인인<br>
+		<span style="display:inline-block; margin-left:96px"> 증서가 필요합니다.</span><br>
+		 <span style="display:inline-block; margin-left:96px">* 공인인증서가 없으신 분은 무통장 입금을 선택하시기 바랍니다.</span>
+	   </li>
+		
+
+
+		<li>
+		   <input name="yp_sett" type="radio" value="2"  onFocus="this.blur()"  onclick="Display('iche')"/><span><b> 실시간 계좌이체 : </b></span><span> 신용카드 결제를 원하지 않으시는 분이 결제하는 방식으로 보유하신 은행계<br>
+		   <span style="display:inline-block; margin-left:151px">좌에서 즉시이체가 가능한 방식입니다.</span></span>
+		</li>
+			
+
+			<li><input name="yp_sett" type="radio" value="6"  onFocus="this.blur()"  onclick="Display('ars')"/><span><b> ARS : </b></span><span> <b>T. 1661-6239</b> ARS 안내에 따라 보유하신 신용카드 정보를 입력하여 결제하는 방법입니</span>
+			<span style="display:inline-block; margin-left:64px">다.</span>
+			</li>
+
+		</ul>
+</body>
+</html>

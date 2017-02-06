@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
+<script>	
+  jQuery(document).ready(function(){
+
+
+     jQuery(".calBtn").click(function(){
+     	var btn = jQuery(this);
+
+         var num1 = parseFloat(btn.parent().find(".num1").val());
+         var num2 = parseFloat(btn.parent().find(".num2").val());
+         var res = btn.parent().find(".calResult");
+     
+         if(jQuery("select.op").val() == "+"){        	
+               res.val(comma(add(num1,num2))+"円");
+         }else if(jQuery("select.op").val() == "-"){
+			   res.val(comma(sub(num1,num2))+"円");
+         }else if(jQuery("select.op").val() == "*"){
+			   res.val(comma(multi(num1,num2))+"円");
+         }else if(jQuery("select.op").val() == "/"){
+			   res.val(comma(divide(num1,num2))+"円");
+         } 
+     });
+
+     jQuery(".calCancle").click(function(){
+          jQuery(".num1").val("");
+          jQuery(".num2").val("");
+          jQuery(".calResult").val("");
+     });
+
+
+  });
+
+  function add(a,b) {
+    return a+b;
+  }
+
+   function sub(a,b) {
+    return a-b;
+  }
+
+   function divide(a,b) {
+    return a/b;
+  }
+
+   function multi(a,b) {
+    return a*b;
+  }
+
+  function comma(str) {
+    str = String(str);
+    return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+}
+</script>
+</head>
+<body>
+	<div class="calculatorWrap">	
+        <input type="text" class="num1"> 
+        <select name="" class="op">
+        	<option value="*">*</option>
+        	<option value="/">/</option>
+        	<option value="+">+</option>
+        	<option value="-">-</option>
+        </select>
+        <input type="text" class="num2"> = <input type="text" class="calResult">
+        <button class="calBtn">計算</button>
+        <button class="calCancle">クリア</button>
+	</div>
+	<div class="calculatorWrap">	
+        <input type="text" class="num1"> 
+        <select name="" class="op">
+        	<option value="*">*</option>
+        	<option value="/">/</option>
+        	<option value="+">+</option>
+        	<option value="-">-</option>
+        </select>
+        <input type="text" class="num2"> = <input type="text" class="calResult">
+        <button class="calBtn">計算</button>
+        <button class="calCancle">クリア</button>
+	</div>
+	<div class="calculatorWrap">	
+        <input type="text" class="num1"> 
+        <select name="" class="op">
+        	<option value="*">*</option>
+        	<option value="/">/</option>
+        	<option value="+">+</option>
+        	<option value="-">-</option>
+        </select>
+        <input type="text" class="num2"> = <input type="text" class="calResult">
+        <button class="calBtn">計算</button>
+        <button class="calCancle">クリア</button>
+	</div>
+	<div class="calculatorWrap">	
+        <input type="text" class="num1"> 
+        <select name="" class="op">
+        	<option value="*">*</option>
+        	<option value="/">/</option>
+        	<option value="+">+</option>
+        	<option value="-">-</option>
+        </select>
+        <input type="text" class="num2"> = <input type="text" class="calResult">
+        <button class="calBtn">計算</button>
+        <button class="calCancle">クリア</button>
+	</div>
+	<div class="calculatorWrap">	
+        <input type="text" class="num1"> 
+        <select name="" class="op">
+        	<option value="*">*</option>
+        	<option value="/">/</option>
+        	<option value="+">+</option>
+        	<option value="-">-</option>
+        </select>
+        <input type="text" class="num2"> = <input type="text" class="calResult">
+        <button class="calBtn">計算</button>
+        <button class="calCancle">クリア</button>
+	</div>
+</body>
+</html>

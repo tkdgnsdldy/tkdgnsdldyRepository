@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Insert HTML inside an iFrame</title>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<style type="text/css">
+    textarea, iframe{
+        display: block;
+        margin: 10px 0;
+    }
+</style>
+<script type="text/javascript">
+   
+    var hinihao = ["가여","강명명","고열","과초","곽소뢰","당림","두밀","묘서","서림","손붕염","손록","송양",
+    "양류","양범","양설","염교","왕개려","왕미","왕영남","왕효나","위문정","유의신","유정정","임순","장려연","전암","전암"
+    ,"정록","정상","정천","조성월","조신","주영","진사","진혜신","차굉설","추운","하동정","하완진","호설군","진탁","왕유","우시양","기려나","왕월원","이릉옥","정은령"];
+
+    alert(hinihao.sort());
+
+    function updateIframe(){
+        var myFrame = $("#myframe").contents().find('body');
+        var textareaValue = $("textarea").val();
+        myFrame.html(textareaValue);
+    }
+
+</script>
+</head>
+<body>
+    <textarea rows="5" cols="50" placeholder="Type HTML or text here..."></textarea>
+    <button type="button" onclick="updateIframe()">Insert Content</button>
+    <iframe id="myframe" src="http://1stopedu.co.kr" width="100%" height="900px"></iframe>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>		
+		 $(function(){
+			    
+         	    $.ajax({
+			     url: "selectMember.php",
+			     dataType: "text",
+			     success: function(data){
+			      //json의 경우는 data는 파싱된 결과
+			      // alert(data[0].num);
+			      console.log(data);
+			      console.log(JSON.parse(data));
+				      $.each(JSON.parse(data), function(index, item){
+				     
+				      // document.write(item.name + ":" +item.task);  
+
+				       $.each(item, function(key, value){
+						        document.writeln(key +" : " + value);
+						    });
+				       document.write("<br>");
+	                  });
+	      
+	                  }
+                });
+   });
+	</script>
+</head>
+<body style="border: 1px solid grey">
+
+<div  style="border-top: 10px solid #e30788; margin-top:0px">
+  <div style="margin-top : 20px;">
+	<span style="font-size:16px;font-weight:700"> 결제 요청을 처리중 입니다. <br><br>
+    잠시만 기다려주세요... 
+	 </span>
+  </div>
+</div>
+
+</body>
+</html>
